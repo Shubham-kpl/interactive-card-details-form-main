@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Space+Grotesk:wght@500&family=Work+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="left">
+        <div class="card">
+          <div class="front">
+            <img src="images/bg-card-front.png" alt="" />
+            <p class="card__number">0000 0000 0000 0000</p>
+            <p class="card__name">Jane Appleseed <span class="card__expiry">00/00</span></p>
+          </div>
+          <div class="back">
+            <img src="images/bg-card-back.png" alt="" />
+            <p class="card__cvc">000</p>
+          </div>
+          <div class="logo">
+            <img src="images/card-logo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <form id="myForm" class="form">
+          <label for="name" class="input__field input__name">
+            CARDHOLDER NAME</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            maxlength="25"
+            class="btn"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <br />
+
+          <label for="number" class="input__field input__number">
+            CARD NUMBER </label
+          ><br />
+          <input
+            type="text"
+            id="number"
+            name="number"
+            minlength="16"
+            maxlength="16"
+            class="btn"
+            placeholder="e.g. 1234 5678 9123 0000"
+          /><br />
+
+          <div class="form-bottom">
+            <div class="details__expiry">
+              <label for="date" class="input__field input__expiry"
+                >EXP. DATE (MM/YY)</label
+              >
+              <div class="fields__expiry">
+                <input
+                  type="text"
+                  id="month"
+                  name="month"
+                  class="btn btn-expiry btn-expiry-1 input__month"
+                  aria-labelledby="date"
+                  placeholder="MM"
+                /><br />
+                <input
+                  type="text"
+                  id="year"
+                  name="year"
+                  class="btn btn-expiry btn-expiry-2 input__year"
+                  aria-labelledby="date"
+                  placeholder="YY"
+                /><br />
+              </div>
+            </div>
+            <div class="details__cvc">
+              <label for="cvc" class="input__field input__cvc">CVC</label><br />
+              <input
+                type="text"
+                id="cvc"
+                name="cvc"
+                class="btn"
+                maxlength="4"
+                placeholder="e.g. 123"
+              /><br />
+            </div>
+          </div>
+          <button class="btn btn-confirm">Confirm</button>
+        </form>
+      </div>
+      <!-- <button type="button" onclick="readInputText()">Read Text</button> -->
+    </div>
+
+    <!-- Thank you! We've added your card details Continue -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#" target="_blank">Shubham Kandpal</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
