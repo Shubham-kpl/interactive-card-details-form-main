@@ -27,16 +27,28 @@
     <div class="main">
       <div class="left">
         <div class="card">
-          <div class="front">
+          <div class="card__front">
             <img src="images/bg-card-front.png" alt="" />
-            <p class="card__number">0000 0000 0000 0000</p>
-            <p class="card__name">Jane Appleseed <span class="card__expiry">00/00</span></p>
+            <p class="card__number card__2">0000 0000 0000 0000</p>
+            <div class="card__bottom">
+              <span class="card__name"
+                ><p class="card__1">Jane Appleseed</p></span
+              >
+              <span
+                class="card__expiry"
+                style="display: flex; align-items: center"
+                ><p class="card__3" data-tab="3">00</p>
+                /
+                <p class="card__4" data-tab="4">00</p></span
+              >
+            </div>
           </div>
-          <div class="back">
+
+          <div class="card__back">
             <img src="images/bg-card-back.png" alt="" />
-            <p class="card__cvc">000</p>
+            <p class="card__cvc card__5" data-tab="5">000</p>
           </div>
-          <div class="logo">
+          <div class="card__logo">
             <img src="images/card-logo.svg" alt="" />
           </div>
         </div>
@@ -44,31 +56,58 @@
 
       <div class="right">
         <form id="myForm" class="form">
-          <label for="name" class="input__field input__name">
-            CARDHOLDER NAME</label
-          >
-          <input
-            type="text"
-            id="name"
-            name="name"
-            maxlength="25"
-            class="btn"
-            placeholder="e.g. Jane Appleseed"
-          />
+          <div class="name">
+            <label for="name" class="input__field input__name">
+              CARDHOLDER NAME</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              maxlength="25"
+              class="btn input__1"
+              data-tab="1"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <span
+              class="error__1--errorblank hidden"
+              style="font-size: 10px; color: red"
+              >Can't be blank</span
+            >
+            <span
+              class="error__1--errorformat hidden"
+              style="font-size: 10px; color: red"
+              >Wrong Format, include alphabets only</span
+            >
+          </div>
           <br />
 
-          <label for="number" class="input__field input__number">
-            CARD NUMBER </label
-          ><br />
-          <input
-            type="text"
-            id="number"
-            name="number"
-            minlength="16"
-            maxlength="16"
-            class="btn"
-            placeholder="e.g. 1234 5678 9123 0000"
-          /><br />
+          <div class="number">
+            <label for="number" class="input__field input__number">
+              CARD NUMBER </label
+            ><br />
+            <input
+              type="text"
+              id="number"
+              name="number"
+              minlength="16"
+              maxlength="16"
+              class="btn input__2"
+              data-tab="2"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <span
+              class="error__2--errorblank hidden"
+              style="font-size: 10px; color: red"
+              >Can't be blank</span
+            >
+            <span
+              class="error__2--errorformat hidden"
+              style="font-size: 10px; color: red"
+              >Wrong Format, include alphabets only</span
+            >
+          </div>
+          <br />
 
           <div class="form-bottom">
             <div class="details__expiry">
@@ -80,19 +119,31 @@
                   type="text"
                   id="month"
                   name="month"
-                  class="btn btn-expiry btn-expiry-1 input__month"
+                  class="btn btn-expiry btn-expiry-1 input__month input__3"
+                  data-tab="3"
                   aria-labelledby="date"
                   placeholder="MM"
-                /><br />
+                />
                 <input
                   type="text"
                   id="year"
                   name="year"
-                  class="btn btn-expiry btn-expiry-2 input__year"
+                  class="btn btn-expiry btn-expiry-2 input__year input__4"
+                  data-tab="4"
                   aria-labelledby="date"
                   placeholder="YY"
-                /><br />
+                />
               </div>
+              <span
+                class="error__3--errorblank hidden error__4--errorblank hidden"
+                style="font-size: 10px; color: red"
+                >Can't be blank</span
+              >
+              <span
+                class="error__3--errorformat hidden error__4--errorformat hidden"
+                style="font-size: 10px; color: red"
+                >Wrong Format, include alphabets only</span
+              >
             </div>
             <div class="details__cvc">
               <label for="cvc" class="input__field input__cvc">CVC</label><br />
@@ -100,12 +151,25 @@
                 type="text"
                 id="cvc"
                 name="cvc"
-                class="btn"
+                class="btn input__5"
                 maxlength="4"
+                data-tab="5"
                 placeholder="e.g. 123"
-              /><br />
+              />
+              <span
+                class="error__4--errorblank hidden"
+                style="font-size: 10px; color: red"
+                >Can't be blank</span
+              >
+              <span
+                class="error__4--errorformat hidden"
+                style="font-size: 10px; color: red"
+                >Wrong Format, include alphabets only</span
+              >
+              <br />
             </div>
           </div>
+          <br />
           <button class="btn btn-confirm">Confirm</button>
         </form>
       </div>

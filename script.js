@@ -13,28 +13,58 @@ const inputMonth = document.querySelector("#month");
 const inputYear = document.querySelector("#year");
 const inputCvc = document.querySelector("#cvc");
 
-let str = "";
-form.addEventListener("click", function (el) {
+function formEvent(el) {
   el.preventDefault();
-  //   if (el.target.classList.contains("form__input")) {
-  //     formName.addEventListener("change", function () {
-  //       cardName.textContent = formName.value;
-  //     });
-  //   } else if (el.target.classList.contains("form__input")) {
-  //     formName.addEventListener("change", function () {
-  //       cardName.textContent = formName.value;
-  //     });
-  //   }
-
   if (el.target.classList.contains("btn")) {
-    document.querySelector()
-    console.log(el.key)
+    document
+      .querySelector(`.input__${el.target.dataset.tab}`)
+      .addEventListener("focus", function () {
+        document.querySelector(
+          `.input__${el.target.dataset.tab}`
+        ).style.borderColor = "red";
+        console.log("hello");
+      });
+    el.target.addEventListener("keyup", function (e) {
+      if (el.target.classList.contains("input__1")) {
+        document.querySelector(`.card__${e.target.dataset.tab}`).innerHTML =
+          e.target.value.toUpperCase();
+      } else if (el.target.classList.contains("input__2")) {
+        document.querySelector(`.card__${e.target.dataset.tab}`).innerHTML =
+          e.target.value;
+        // console.log(typeof toString(e.target.value));
+        // console.log(e.target.value + " " + 3);
+        // if (e.target.value.length % 4 == 0)
+        //   document.querySelector(
+        //     `.card__${e.target.dataset.tab}`
+        //   ).innerHTML = `${e.target.value + " "}`;
+      }
+      if (
+        document.querySelector(`.card__${e.target.dataset.tab}`).innerHTML ===
+        ""
+      ) {
+        document
+          .querySelector(`.input__${e.target.dataset.tab}`)
+          .classList.add("error");
+        document
+          .querySelector(`.error__${e.target.dataset.tab}--errorblank`)
+          .classList.remove("hidden");
+      } else {
+        document
+          .querySelector(`.input__${e.target.dataset.tab}`)
+          .classList.remove("error");
+        document
+          .querySelector(`.error__${e.target.dataset.tab}--errorblank`)
+          .classList.add("hidden");
+      }
+    });
   }
   // let validName = checkName(),
   //   validNumber = checkNumber(),
   //   validDate = checkDate(),
   //   validPin = checkPin();
-});
+}
+
+form.addEventListener("click", formEvent);
 
 // function checkName() {
 //   let valid = false;
