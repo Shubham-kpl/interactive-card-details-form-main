@@ -90,11 +90,10 @@
 /* Completed state */
 .complete {
     width: 50%;
+    align-items: center;
+    display: block;
     text-align: center;
     margin: auto;
-    top: 25%;
-    left: 45%;
-    padding: 10px;
 }
 
 
