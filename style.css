@@ -3,10 +3,10 @@
 }
 
 .main {
-    display: flex;
     height: 100vh;
 }
 
+/************** Left Side */
 .left {
     width: 30%;
     height: 100%;
@@ -19,6 +19,7 @@
     left: 15%;
 }
 
+/* Front */
 .card__front {
     position: relative;
     margin-bottom: 15px;
@@ -31,11 +32,13 @@
 }
 
 .card__number {
+    box-sizing: border-box;
     top: 38%;
     left: 10%;
     position: absolute;
     color: white;
     font-size: 22px;
+    width: 100%;
     letter-spacing: 2.5px;
 }
 
@@ -57,6 +60,8 @@
     position: absolute;
 }
 
+
+/* Back */
 .card__back {
     position: relative;
     left: 23%;
@@ -74,14 +79,26 @@
     height: 200px;
 }
 
+/********** Right side **/
+
 .right {
-    width: 50%;
+    /* width: 50%; */
     height: 100%;
     position: absolute;
     top: 25%;
     left: 45%;
 }
 
+/* Completed state */
+.complete {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+
+/* Form */
 .form {
     align-items: center;
     display: block;
@@ -89,13 +106,35 @@
     width: 50%;
 }
 
-.input__field {
+/* Input */
+.input__label {
     font-size: 10px;
     letter-spacing: 1.5px;
     font-weight: 600;
-    /* margin-bottom: 5px; */
 }
 
+.input__field {
+    outline: none;
+}
+
+.form-bottom {
+    display: flex;
+}
+
+.input__expiry {
+    width: 49%;
+    margin-right: 25px;
+}
+
+.fields__expiry {
+    display: flex;
+}
+
+.input__cvc {
+    width: 49%;
+}
+
+/* Form buttons */
 .btn {
     width: 100%;
     height: 40px;
@@ -106,28 +145,8 @@
     box-sizing: border-box;
     padding-left: 15px;
     font-size: 16px;
+    margin-top: 8px;
     /* color: black; */
-}
-
-.form-bottom {
-    display: flex;
-}
-
-.details__expiry {
-    width: 49%;
-}
-
-.details__cvc {
-    width: 49%;
-}
-
-
-.details__expiry {
-    margin-right: 25px;
-}
-
-.fields__expiry {
-    display: flex;
 }
 
 .btn-expiry {
@@ -138,39 +157,30 @@
     margin-right: 10px;
 }
 
-.btn-confirm {
+.btn-submit {
     color: white;
     background-color: hsl(278, 68%, 11%);
 }
 
 .btn--active {
-    width: 100%;
-    height: 40px;
-    background-color: white;
-    border-radius: 8px;
-    border: 7px solid hsl(279, 6%, 55%);
-    display: block;
-    box-sizing: border-box;
-    padding-left: 15px;
-    font-size: 16px;
+    outline: 1.5px solid hsl(278, 68%, 11%);
 }
 
-.error {
-    width: 100%;
-    height: 40px;
-    background-color: white;
-    border-radius: 8px;
-    border: 1.5px solid red;
-    display: block;
-    box-sizing: border-box;
-    padding-left: 15px;
-    font-size: 16px;
+.btn-complete {
+    color: white;
+    background-color: hsl(278, 68%, 11%);
+}
+
+/* Error */
+.btn--error {
+    outline: 1.5px solid red;
 }
 
 .hidden {
     display: none;
 }
 
+/* Attribution */
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -179,3 +189,30 @@
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+/* Media Query */
+/* @media screen and (max-width: 992px) {
+    .left {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .right {
+        top: 100%;
+        left: 0%;
+    }
+    .card__front {
+        top: 15px;
+        left: -50px;
+        width: 80%;
+        background-size: co;
+        height: 100px;
+    }
+    .card__logo {
+        top: 30px;
+        left: -10px;
+    }
+    .card__back {
+        top: -320px;
+    }
+} */ 

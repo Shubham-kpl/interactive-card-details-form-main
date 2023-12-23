@@ -55,134 +55,123 @@
       </div>
 
       <div class="right">
+        <div class="complete hidden">
+          <img src="images/icon-complete.svg" alt="" />
+          <p style="letter-spacing: 2.5px; font-size: 22px">THANK YOU!</p>
+          <p style="font-size: 15px; color: rgba(0, 0, 0, 0.5)">
+            We've added your card details
+          </p>
+          <br />
+          <button class="btn btn-complete">Continue</button>
+        </div>
         <form id="myForm" class="form">
-          <div class="name">
-            <label for="name" class="input__field input__name">
-              CARDHOLDER NAME</label
-            >
+          <div class="input__name">
+            <label for="name" class="input__label"> CARDHOLDER NAME</label>
             <input
               type="text"
               id="name"
               name="name"
               maxlength="25"
-              class="btn input__1"
+              class="btn input__field input__1 btn--active"
               data-tab="1"
               placeholder="e.g. Jane Appleseed"
             />
             <span
-              class="error__1--errorblank hidden"
+              class="error__1 hidden"
               style="font-size: 10px; color: red"
-              >Can't be blank</span
-            >
-            <span
-              class="error__1--errorformat hidden"
-              style="font-size: 10px; color: red"
-              >Wrong Format, include alphabets only</span
-            >
+            ></span>
           </div>
           <br />
 
-          <div class="number">
-            <label for="number" class="input__field input__number">
-              CARD NUMBER </label
-            ><br />
+          <div class="input__number">
+            <label for="number" class="input__label"> CARD NUMBER </label><br />
             <input
               type="text"
               id="number"
               name="number"
               minlength="16"
               maxlength="16"
-              class="btn input__2"
+              class="btn input__field input__2"
               data-tab="2"
               placeholder="e.g. 1234 5678 9123 0000"
             />
             <span
-              class="error__2--errorblank hidden"
+              class="error__2 hidden"
               style="font-size: 10px; color: red"
-              >Can't be blank</span
-            >
-            <span
-              class="error__2--errorformat hidden"
-              style="font-size: 10px; color: red"
-              >Wrong Format, include alphabets only</span
-            >
+            ></span>
           </div>
           <br />
 
           <div class="form-bottom">
-            <div class="details__expiry">
-              <label for="date" class="input__field input__expiry"
-                >EXP. DATE (MM/YY)</label
-              >
+            <div class="input__expiry">
+              <label for="date" class="input__label">EXP. DATE (MM/YY)</label>
               <div class="fields__expiry">
                 <input
                   type="text"
                   id="month"
                   name="month"
-                  class="btn btn-expiry btn-expiry-1 input__month input__3"
+                  class="btn btn-expiry btn-expiry-1 input__month input__3 input__field"
                   data-tab="3"
                   aria-labelledby="date"
                   placeholder="MM"
+                  maxlength="2"
+                  minlength="1"
+                  max="12"
+                  min="1"
                 />
                 <input
                   type="text"
                   id="year"
                   name="year"
-                  class="btn btn-expiry btn-expiry-2 input__year input__4"
+                  class="btn btn-expiry btn-expiry-2 input__year input__4 input__field"
                   data-tab="4"
                   aria-labelledby="date"
                   placeholder="YY"
+                  maxlength="2"
+                  minlength="1"
+                  max="50"
+                  min="23"
                 />
               </div>
               <span
-                class="error__3--errorblank hidden error__4--errorblank hidden"
+                class="error__3 error__4 hidden"
                 style="font-size: 10px; color: red"
-                >Can't be blank</span
-              >
-              <span
-                class="error__3--errorformat hidden error__4--errorformat hidden"
-                style="font-size: 10px; color: red"
-                >Wrong Format, include alphabets only</span
-              >
+              ></span>
             </div>
-            <div class="details__cvc">
-              <label for="cvc" class="input__field input__cvc">CVC</label><br />
+            <div class="input__cvc">
+              <label for="cvc" class="input__label">CVC</label><br />
               <input
                 type="text"
                 id="cvc"
                 name="cvc"
-                class="btn input__5"
+                class="btn input__field input__5"
                 maxlength="4"
                 data-tab="5"
                 placeholder="e.g. 123"
               />
               <span
-                class="error__4--errorblank hidden"
+                class="error__5 hidden"
                 style="font-size: 10px; color: red"
-                >Can't be blank</span
-              >
-              <span
-                class="error__4--errorformat hidden"
-                style="font-size: 10px; color: red"
-                >Wrong Format, include alphabets only</span
-              >
+              ></span>
               <br />
             </div>
           </div>
           <br />
-          <button class="btn btn-confirm">Confirm</button>
+          <button class="btn btn-submit">Confirm</button>
         </form>
       </div>
-      <!-- <button type="button" onclick="readInputText()">Read Text</button> -->
     </div>
-
-    <!-- Thank you! We've added your card details Continue -->
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#" target="_blank">Shubham Kandpal</a>.
+      >. Coded by
+      <a
+        href="https://www.linkedin.com/in/shubham-kandpal-59870322a/"
+        target="_blank"
+        >Shubham Kandpal</a
+      >.
     </div>
 
     <script src="script.js"></script>
