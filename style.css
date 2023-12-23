@@ -46,7 +46,6 @@
     top: -60px;
     left: 8%;
     position: relative;
-    /* display: inline; */
     color: white;
 }
 
@@ -82,8 +81,8 @@
 /********** Right side **/
 
 .right {
-    /* width: 50%; */
-    height: 100%;
+    width: 50%;
+    /* height: 100%; */
     position: absolute;
     top: 25%;
     left: 45%;
