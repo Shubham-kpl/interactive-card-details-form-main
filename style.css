@@ -163,7 +163,7 @@
 }
 
 .btn--active {
-    outline: 1.5px solid hsl(278, 68%, 11%);
+    outline: 1px solid hsl(278, 68%, 11%);
 }
 
 .btn-complete {
@@ -173,7 +173,7 @@
 
 /* Error */
 .btn--error {
-    outline: 1.5px solid red;
+    outline: 1px solid red;
 }
 
 .hidden {
